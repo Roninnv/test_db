@@ -7,7 +7,6 @@ CREATE TABLE warehouse (
     warehouse_name VARCHAR(255) NOT NULL,
     location VARCHAR(255) NOT NULL,
     status ENUM('active', 'inactive') DEFAULT 'active',
-    capacity INT NOT NULL DEFAULT 0
 );
 
 -- 货物表
