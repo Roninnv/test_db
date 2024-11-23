@@ -65,6 +65,7 @@
     "items": [
       { "log_id": 1,
         "goods_id": 1,
+        "goods_name": "coffee",
         "quantity": 50,
         "price": 100.00,
         "warehouse_id": 1,
@@ -73,6 +74,7 @@
       },
       { "log_id": 2,
         "goods_id": 2,
+        "goods_name": "coke",
         "quantity": 100,
         "price": 2.50,
         "warehouse_id": 2,
@@ -114,6 +116,7 @@
     "items": [
       { "log_id": 1,
         "goods_id": 1,
+        "goods_name": "coffee",
         "quantity": 50,
         "price": 100.00,
         "warehouse_id": 1,
@@ -122,6 +125,7 @@
       },
       { "log_id": 2,
         "goods_id": 2,
+        "goods_name": "coke",
         "quantity": 100,
         "price": 2.50,
         "warehouse_id": 2,
