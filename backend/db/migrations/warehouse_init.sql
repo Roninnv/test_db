@@ -12,9 +12,9 @@ CREATE TABLE warehouse (
 -- 货物表
 CREATE TABLE goods (
     goods_id INT AUTO_INCREMENT PRIMARY KEY,
-    goods_name VARCHAR(255) NOT NULL,
-    goods_type VARCHAR(100) NOT NULL,
-    owner_id VARCHAR(255) NOT NULL,
+    goods_name VARCHAR(18) NOT NULL,
+    goods_type VARCHAR(18) NOT NULL,
+    owner_name VARCHAR(10) NOT NULL,
     price DECIMAL(10, 2) NOT NULL,
     quantity INT NOT NULL,
     warehouse_id INT,
