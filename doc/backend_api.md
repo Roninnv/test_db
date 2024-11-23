@@ -18,14 +18,14 @@
     "items": [
       { "goods_name": "coffee",
         "goods_type": "drinks",
-        "owner_id": "John",
+        "owner_name": "John",
         "price": 100.00,
         "quantity": 50, 
         "warehouse_id": 1,
       },
       { "goods_name": "coke",
         "goods_type": "drinks",
-        "owner_id": "johnson",
+        "owner_name": "johnson",
         "price": "2.5",
         "quantity": 100, 
         "warehouse_id": 1,
@@ -68,7 +68,7 @@
         "quantity": 50,
         "price": 100.00,
         "warehouse_id": 1,
-        "owner_id": "john",
+        "owner_name": "john",
         "inbound_date": "",
       },
       { "log_id": 2,
@@ -76,7 +76,7 @@
         "quantity": 100,
         "price": 2.50,
         "warehouse_id": 2,
-        "owner_id": "johnson",
+        "owner_name": "johnson",
         "inbound_date": "",
       }
     ]
@@ -117,7 +117,7 @@
         "quantity": 50,
         "price": 100.00,
         "warehouse_id": 1,
-        "owner_id": "john",
+        "owner_name": "john",
         "inbound_date": "",
       },
       { "log_id": 2,
@@ -125,7 +125,7 @@
         "quantity": 100,
         "price": 2.50,
         "warehouse_id": 2,
-        "owner_id": "johnson",
+        "owner_name": "johnson",
         "inbound_date": "",
       }
     ]
