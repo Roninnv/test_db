@@ -6,7 +6,7 @@ CREATE TABLE warehouse (
     warehouse_id INT AUTO_INCREMENT PRIMARY KEY,
     warehouse_name VARCHAR(255) NOT NULL,
     location VARCHAR(255) NOT NULL,
-    status ENUM('active', 'inactive') DEFAULT 'active',
+    status TINYINT(1) NOT NULL DEFAULT 1
 );
 
 -- 货物表
