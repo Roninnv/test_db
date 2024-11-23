@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"path/filepath"
 	"strings"
+
+	"backend/db_script/lib"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -55,31 +56,27 @@ func executeSQLFromFile(filename string) error {
 	return nil
 }
 
-func ListFiles() {
-	root := "./migrations"
-
-	err := filepath.WalkDir(root, func(path string, d os.DirEntry, err error) error {
-		if err != nil {
-			return err
-		}
-		fmt.Println("1:" + path)
-		return nil
-	})
-
-	if err != nil {
-		fmt.Printf("Error walking the path %v: %v\n", root, err)
-	}
-}
-
 func main() {
-	defer logFile.Close()
+	/*
+		defer logFile.Close()
 
-	err := executeSQLFromFile("../db/migrations/202411161001_init.sql")
+		err := executeSQLFromFile("../db/migrations/202411161001_init.sql")
+		if err != nil {
+			log.Fatalf("failed to initialize the database: %v", err)
+		}
+
+		log.Println("Database initialization succeeded")
+		fmt.Println("Database initialization succeeded")
+	*/
+	config, err := lib.LoadConfig("./database_config.yaml")
 	if err != nil {
-		log.Fatalf("failed to initialize the database: %v", err)
+		log.Fatalf("Error loading config: %v", err)
 	}
 
-	log.Println("Database initialization succeeded")
-	fmt.Println("Database initialization succeeded")
-	// ListFiles()
+	// 输出解析后的配置
+	fmt.Printf("Database Config:\n")
+	fmt.Printf("Host: %s\n", config.Database.Host)
+	fmt.Printf("Port: %d\n", config.Database.Port)
+	fmt.Printf("Username: %s\n", config.Database.Username)
+	fmt.Printf("Password: %s\n", config.Database.Password)
 }

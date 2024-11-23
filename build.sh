@@ -3,5 +3,9 @@
 cd ./backend
 go mod tidy
 
-cd db
-go build -o ../dist/sql_script
+cd db_script
+go build -o ../bin/sql_script
+
+cd ..
+cp -r ./db ./bin
+cp ./db_script/database_config.yaml ./bin

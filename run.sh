@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cd ./backend/dist/
+cd ./backend/bin
 ./sql_script
