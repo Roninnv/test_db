@@ -12,9 +12,9 @@ CREATE TABLE warehouse (
 -- 货物表
 CREATE TABLE goods (
     goods_id INT AUTO_INCREMENT PRIMARY KEY,
-    goods_name VARCHAR(18) NOT NULL,
-    goods_type VARCHAR(18) NOT NULL,
-    owner_name VARCHAR(10) NOT NULL,
+    goods_name VARCHAR(30) NOT NULL,
+    goods_type VARCHAR(30) NOT NULL,
+    owner_name VARCHAR(30) NOT NULL,
     price DECIMAL(10, 2) NOT NULL,
     quantity INT NOT NULL,
     warehouse_id INT,
@@ -25,7 +25,7 @@ CREATE TABLE goods (
 CREATE TABLE inbound_log (
     log_id INT AUTO_INCREMENT PRIMARY KEY,
     goods_id INT NOT NULL,
-    goods_name VARCHAR(18) NOT NULL,
+    goods_name VARCHAR(30) NOT NULL,
     quantity INT NOT NULL,
     price DECIMAL(10, 2) NOT NULL,
     warehouse_id INT NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE inbound_log (
 CREATE TABLE outbound_log (
     log_id INT AUTO_INCREMENT PRIMARY KEY,
     goods_id INT NOT NULL,
-    goods_name VARCHAR(18) NOT NULL,
+    goods_name VARCHAR(30) NOT NULL,
     quantity INT NOT NULL,
     price DECIMAL(10, 2) NOT NULL,
     warehouse_id INT NOT NULL,
