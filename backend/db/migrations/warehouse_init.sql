@@ -1,4 +1,4 @@
-CREATE DATABASE warehouse;
+CREATE DATABASE IF NOT EXISTS warehouse;
 USE warehouse;
 
 -- 仓库表
